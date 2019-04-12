@@ -294,5 +294,15 @@ export class AppComponent implements OnInit {
     this.map.setFilter('zipcodes');
 
     this.map.setFilter('Zip');
+
+    (this.filterEl as any).value = '';
+    this.listingEl.innerHTML = '';
+
+    const empty = document.createElement('p');
+    empty.textContent = 'Drag the map to populate results';
+    this.listingEl.appendChild(empty);
+
+    // Hide the filter input
+    (this.filterEl.parentNode as any).style.display = 'none';
   }
 }
