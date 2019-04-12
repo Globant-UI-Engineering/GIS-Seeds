@@ -1,2 +1,11 @@
 <div class="map" id="map"></div>
 
+<div class='map-overlay'>
+  <div>
+    <button type="button" (click)="onClearFilter()">Clear Filter</button>
+  </div>
+  <fieldset>
+    <input id='feature-filter' type='text' size='26' placeholder='Filter results by zipcode' />
+  </fieldset>
+  <div id='feature-listing' class='listing'></div>
+</div>
