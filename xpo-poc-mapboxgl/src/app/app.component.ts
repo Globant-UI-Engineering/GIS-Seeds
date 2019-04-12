@@ -132,11 +132,11 @@ export class AppComponent implements OnInit {
 
       // Display zip codes list for visible map area
       this.map.on('moveend', () => {
-        console.log('moveend');
+        // console.log('moveend');
 
         // find features that are currently displayed
         const features = this.map.queryRenderedFeatures({layers: ['zipcodes']});
-        console.log(features);
+        // console.log(features);
 
         if (features) {
           // eliminate duplicates if needed
